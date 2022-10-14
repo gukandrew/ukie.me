@@ -2,33 +2,46 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+<div class="container bg-light">
+  <div class="row">
+    <div class="col-12 col-md">
+      <div class="pt-5">
+        {%- if page.title -%}
+          <h1 class="py-3"><span class="text-primary">{{page.title | escape}}</span></h1>
+          <!-- <p class="fs-4 fw-normal">{{page.title | escape}}</p> -->
+          <!-- <p class="fs-5 fw-lighter py-3">{{page.title | escape}}</p> -->
         {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+      </div>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+      {{ content }}
 
+      {%- if site.posts.size > 0 -%}
+        <h2 class="fs-4 fw-normal">{{ page.list_title | default: "Posts" }}</h2>
+        {%- for post in site.posts -%}
+          <h3>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          <p class="fst-italic">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+          </p>
+
+          <div class="fw-lighter">
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+      {%- endif -%}
+    </div>
+
+    <div class="col-md">
+
+    </div>
+  </div>
 </div>
+

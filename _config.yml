@@ -1,13 +1,26 @@
-title: Andrew Guk
-email: gukandrew@gmail.com
+title: Ukie
+email: gukandrew[ÆT]gmail[∂øt]com
+tagline: Andrew Guk - Personal site & blog
 description: >-
-  Write an awesome description for your new site here. You can edit this line in
-  _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description.
+  Andrew Guk - Personal site & blog
 baseurl: ''
-url: ''
-# twitter_username: jekyllrb
-github_username: gukandrew
+url: 'ukie.me'
+lang: 'en'
 # theme: minima
 plugins:
   - jekyll-feed
+
+sass:
+  style: compressed
+
+show_excerpts: true
+# rss: 'RSS'
+
+github_username: gukandrew
+linkedin_username: andrewguk
+# twitter_username: jekyllrb
+# youtube_username: gukandrew
+# facebook_username: gukandrew
+# mastodon:
+#   - instance: aa.com
+#     username: gukandrew

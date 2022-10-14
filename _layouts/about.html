@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<div class="container bg-light">
+  <div class="row">
+    <div class="col-12 col-md">
+
+      <div class="pt-5">
+        <h1 class="py-3">About <span class="text-primary">Me</span></h1>
+        <p class="fs-4 fw-normal">{{page.description_short | html}}</p>
+        <p class="fs-5 fw-lighter py-3">{{page.description_long | escape}}</p>
+      </div>
+    </div>
+
+    <div class="col-12 col-md text-center pt-md-3">
+      {% if page.main_img %}
+        <img class="img-fluid pt-0 mt-md-5" src="{{ page.main_img | relative_url }}" title="{{ page.main_img_comment | strip_html | escape }}" alt="{{ page.main_img_comment | strip_html | escape }}">
+        <!-- {{ page.main_img_comment | strip_html | escape }} -->
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 my-2 d-block d-lg-none">
+      <h5 class="py-3">Skills</h5>
+      {%- for skill in page.skills -%}
+        <span class="badge rounded-pill text-bg-primary my-1 me-1 fs-6">{{skill | escape}}</span>
+      {%- endfor -%}
+    </div>
+
+    <div class="col-12 col-lg-8 col-xxl-6 my-2">
+      <h5 class="py-3">Experience</h5>
+
+      <dl class="row">
+        {% assign experience_sorted = page.experience | reverse %}
+        {% assign first = true %}
+        {% for item in experience_sorted %}
+          {% if first %}
+          <details open>
+          {% else %}
+          <details>
+          {% endif %}
+          {% assign first = false %}
+            <summary>
+              <strong class="d-inline-block" style="width: 120px;">{{item.duration | escape}}</strong>
+              {% for tech in item.tech %}
+                <span class="badge text-bg-secondary">{{tech | escape}}</span>
+              {% endfor %}
+              <span class="d-block d-sm-inline-block">{{item.title | escape}}</span>
+            </summary>
+            <p class="m-0 pt-1 pb-3 fw-lighter">{{item.description | escape}}</p>
+          </details>
+        {% endfor %}
+      </dl>
+    </div>
+
+    <div class="col-lg-4 col-xxl-6 d-none d-lg-block">
+      <h5 class="py-3">Skills</h5>
+      {%- for skill in page.skills -%}
+        <span class="badge rounded-pill text-bg-primary my-1 me-1 fs-6">{{skill | escape}}</span>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
