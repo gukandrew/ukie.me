@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 
-main_img: /assets/programmer-3.gif
+main_img: assets/programmer-3.gif
 main_img_comment: Image by Keo Dara
 description_short: >
   I'm Andrew Guk, Developer <br> from Lviv, Ukraine
