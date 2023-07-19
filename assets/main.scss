@@ -1,5 +1,16 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# !!! The main Sass file needs front matter (the dashes are enough)
 ---
 
-// @import "minima";
+@import "bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+article {
+  @media(max-width: map-get($grid-breakpoints, "xl")) {
+    img {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+  }
+}
