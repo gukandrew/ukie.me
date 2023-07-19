@@ -2,14 +2,16 @@
 layout: default
 ---
 
-<div class="container bg-light">
+<div class="bg-light">
   <div class="row">
     <div class="col-12 col-md">
       <div class="pt-5">
         {%- if page.title -%}
-          <h1 class="py-3"><span class="text-primary">{{page.title | escape}}</span></h1>
-          <!-- <p class="fs-4 fw-normal">{{page.title | escape}}</p> -->
-          <!-- <p class="fs-5 fw-lighter py-3">{{page.title | escape}}</p> -->
+          <h1 class="py-3">{{page.title | escape}}
+          {%- if page.title_additional -%}
+            <span class="text-primary">{{page.title_additional | escape}}</span>
+          {%- endif -%}
+          </h1>
         {%- endif -%}
       </div>
 
@@ -39,8 +41,17 @@ layout: default
       {%- endif -%}
     </div>
 
-    <div class="col-md">
+    <div class="col-12 col-md text-center pt-md-3">
+      {% if page.main_img %}
+      <img class="img-fluid pt-0 mt-md-5" src="{{ page.main_img }}"
+        title="{{ page.main_img_comment | strip_html | escape }}" alt="{{ page.main_img_comment | strip_html | escape }}">
+      <!-- {{ page.main_img_comment | strip_html | escape }} -->
+      {% endif %}
 
+      {% for tag in site.tags %}
+      {{tag.url}}
+        <span class="badge rounded-pill text-bg-primary my-1 me-1 fs-6">{{tag | first}}</span>
+      {% endfor %}
     </div>
   </div>
 </div>

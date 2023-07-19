@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="container bg-light">
+<div class="bg-light">
   <div class="row">
     <div class="col-12 col-md">
 
@@ -55,10 +55,14 @@ layout: default
     </div>
 
     <div class="col-lg-4 col-xxl-6 d-none d-lg-block">
-      <h5 class="py-3">Skills</h5>
-      {%- for skill in page.skills -%}
-        <span class="badge rounded-pill text-bg-primary my-1 me-1 fs-6">{{skill | escape}}</span>
-      {%- endfor -%}
+      <div class="row">
+        <div class="col-12 col-md-9 m-auto">
+          <h5 class="py-3">Skills</h5>
+          {%- for skill in page.skills -%}
+            <span class="badge rounded-pill text-bg-primary my-1 me-1 fs-6">{{skill | escape}}</span>
+          {%- endfor -%}
+        </div>
+      </div>
     </div>
   </div>
 </div>

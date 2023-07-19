@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 
-main_img: assets/programmer-3.gif
+main_img: /assets/programmer-3.gif
 main_img_comment: Image by Keo Dara
 description_short: >
   I'm Andrew Guk, Developer <br> from Lviv, Ukraine
@@ -13,6 +13,8 @@ description_long: >
 
 skills:
   - Ruby
+  - Golang
+  - TypeScript
   - JavaScript
   - Vue.js
   - Ruby on Rails
@@ -65,6 +67,7 @@ experience:
     tech:
       - Ruby
       - Vue
+      - Golang
     title: Test Collector Dashboard
     description: "Automation solution for managing applications testing process. The product provides ability to start, update and grow information from numerous services aimed on testing APIs or UI and manage results for CI processes of customer products."
   - duration: 13 months
@@ -72,7 +75,9 @@ experience:
     title: eCommerce quotation platform with reporting tool
     description: "Software solution for managing customer quotes. The product gives ability for manager person to create customer, collect predefined quotes with custom options for any customer, and proceed to their account with single login bridge after to have instant pay feature."
   - duration: 2021.02 - now
-    tech: Ruby
+    tech:
+      - Ruby
+      - Golang
     title: Fundraising platform
     description: "Online platform and tools to help businesses manage their product fundraising business, make raising money for local organizations of various type."
 ---
