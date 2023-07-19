@@ -26,3 +26,8 @@ google_analytics: G-Q1FZ7RBZY0
 # mastodon:
 #   - instance: aa.com
 #     username: gukandrew
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title:output_ext
