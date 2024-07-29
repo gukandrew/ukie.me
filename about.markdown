@@ -17,13 +17,17 @@ skills:
   - TypeScript
   - JavaScript
   - Vue.js
+  - Nuxt.js
   - Ruby on Rails
   - SQL
   - HTML/CSS
   - Services
   - REST
   - React
+  - Next.js
+  - Tailwind CSS
   - Bootstrap
+  - Fundraising
   - eCommerce
   - Stripe
 
@@ -74,10 +78,26 @@ experience:
     tech: Ruby
     title: eCommerce quotation platform with reporting tool
     description: "Software solution for managing customer quotes. The product gives ability for manager person to create customer, collect predefined quotes with custom options for any customer, and proceed to their account with single login bridge after to have instant pay feature."
-  - duration: 2021.02 - now
+  - duration: 30 months
     tech:
       - Ruby
       - Golang
-    title: Fundraising platform
+    title: Fundraising Platform
     description: "Online platform and tools to help businesses manage their product fundraising business, make raising money for local organizations of various type."
+  - duration: 6 months
+    tech:
+      - Vue
+      - Vite
+      - Express.js
+    title: Comprehensive Signup and Payment Solution
+    description: "The Seamless Self-Service Portal is designed to provide simplicity and efficiency for both  customers and company colleagues across the business. It offers a consistent user experience and automates repetitive tasks, making them more intuitive and user-friendly."
+  # - duration: 2021.02 - now
+  - duration: 12 months
+    tech:
+      - React
+      - Next.js
+      - Tailwind CSS
+    title: Organization Self-Service Portal
+    description: "Designed and implemented a robust signup forms solution with validation using Vue and Vite for the frontend, and Express.js for the backend. Integrated PayPal as the payment gateway in the final steps to securely process payments. Leveraged Google Sheets to store and manage all user information, including payment IDs and statuses, ensuring seamless data tracking and retrieval."
+  
 ---
