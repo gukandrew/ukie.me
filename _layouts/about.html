@@ -30,7 +30,6 @@ layout: default
 
     <div class="col-12 col-lg-8 col-xxl-6 my-2">
       <h5 class="py-3">Experience</h5>
-
       <dl class="row">
         {% assign experience_sorted = page.experience | reverse %}
         {% assign first = true %}
@@ -43,11 +42,16 @@ layout: default
           {% assign first = false %}
             <summary>
               <strong class="d-inline-block" style="width: 120px;">{{item.duration | escape}}</strong>
-              {% for tech in item.tech %}
-                <span class="badge text-bg-secondary">{{tech | escape}}</span>
-              {% endfor %}
+              <div class="tech d-inline-block">
+                {% for tech in item.tech limit:2 %}
+                  <span class="badge text-bg-secondary">{{tech | escape}}</span>
+                {% endfor %}
+              </div>
               <span class="d-block d-sm-inline-block">{{item.title | escape}}</span>
             </summary>
+            {% for tech in item.tech %}
+              <span class="badge text-bg-secondary">{{tech | escape}}</span>
+            {% endfor %}
             <p class="m-0 pt-1 pb-3 fw-lighter">{{item.description | escape}}</p>
           </details>
         {% endfor %}

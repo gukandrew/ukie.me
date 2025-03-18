@@ -15,3 +15,14 @@ article {
     }
   }
 }
+
+// About page
+details[open] {
+  summary .tech {
+    display: none !important;
+  }
+
+  .tech {
+    display: block;
+  }
+}
